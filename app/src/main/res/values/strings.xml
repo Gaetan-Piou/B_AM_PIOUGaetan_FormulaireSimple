@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PIOU Gaetan Formulaire Simple</string>
+    <string name="action_settings">Options</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Accueil</string>
+    <string name="second_fragment_label">Formulaire</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="titre">Formulaire</string>
+    <string name="hintId">Identifiant</string>
+    <string name="hintMdp">Mot de passe</string>
+    <string name="login">Se connecter</string>
+
+    <string name="hello_first_fragment">Bonjour. Veuillez repondre au formulaire suivant</string>
+    <string name="hello_second_fragment"></string>
+
+    <string name="bonjour">Bonjour</string>
+    <string name="mdp">votre mot de passe est :</string>
+    <string name="erreur">Veuillez d\'abord remplir le formulaire.</string>
+
+    <string name="radioH">Homme</string>
+    <string name="radioF">Femme</string>
+</resources>
