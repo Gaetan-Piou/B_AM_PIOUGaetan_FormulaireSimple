@@ -3,11 +3,11 @@
     <string name="action_settings">Options</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Accueil</string>
-    <string name="second_fragment_label">Formulaire</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="second_fragment_label">Formulaire Simple</string>
+    <string name="next">Suivant</string>
+    <string name="previous">Précédent</string>
 
-    <string name="titre">Formulaire</string>
+    <string name="titre">Formulaire Simple</string>
     <string name="hintId">Identifiant</string>
     <string name="hintMdp">Mot de passe</string>
     <string name="login">Se connecter</string>
@@ -18,6 +18,8 @@
     <string name="bonjour">Bonjour</string>
     <string name="mdp">votre mot de passe est :</string>
     <string name="erreur">Veuillez d\'abord remplir le formulaire.</string>
+    <string name="genreH">Vous êtes un</string>
+    <string name="genreF">Vous êtes une</string>
 
     <string name="radioH">Homme</string>
     <string name="radioF">Femme</string>

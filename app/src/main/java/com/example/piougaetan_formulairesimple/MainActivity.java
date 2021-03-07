@@ -60,38 +60,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void setActivityBackgroundColor(int color) {
-        View background = findViewById(R.id.background);
-        background.setBackgroundColor(color);
-    }
-
-    public void login(View v){
-        EditText username = (EditText)findViewById(R.id.username);
-        EditText password = (EditText)findViewById(R.id.password);
-        RadioGroup genre = (RadioGroup)findViewById(R.id.genre);
-        RadioButton genreSelectionne;
-
-        String sUsername = username.getText().toString();
-        String sPassword = password.getText().toString();
-        int boutonSelectionne = genre.getCheckedRadioButtonId();
-        String texteGenre;
-
-        if(sUsername != "" && sPassword != "" & boutonSelectionne != -1) {
-            String texteBienvenue = getResources().getString(R.string.bonjour) + " " + sUsername + ", " + getResources().getString(R.string.mdp) + " " + sPassword;
-            Toast.makeText(this, texteBienvenue, Toast.LENGTH_LONG).show();
-
-            genreSelectionne = findViewById(boutonSelectionne);
-            texteGenre = genreSelectionne.getText().toString();
-
-            if(texteGenre == getResources().getString(R.string.radioH)) {
-                setActivityBackgroundColor(R.color.bleu);
-            } else {
-                setActivityBackgroundColor(R.color.rouge);
-            }
-
-        } else {
-            Toast.makeText(this, getResources().getString(R.string.erreur), Toast.LENGTH_LONG).show();
-        }
-    }
 }

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -23,7 +24,24 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
+        TextView message = (TextView) view.findViewById(R.id.Bienvenue);
+
+        String sNom = getArguments().getString("Nom");
+        String sMdp = getArguments().getString("Mdp");
+        String sGenre = getArguments().getString("Genre");
+        String textGenre;
+
+        if(sGenre == getResources().getString(R.string.radioH)) {
+            textGenre = getResources().getString(R.string.genreH) + " " + sGenre;
+        } else {
+            textGenre = getResources().getString(R.string.genreF) + " " + sGenre;
+        }
+
+        String sTexte = getResources().getString(R.string.bonjour) + " " + sNom + " " + getResources().getString(R.string.mdp) + " " + sMdp + " " + textGenre;
+
+        message.setText(sTexte);
+
+        view.findViewById(R.id.btn_retour).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(SecondFragment.this)

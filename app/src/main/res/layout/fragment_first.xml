@@ -1,28 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context="com.example.piougaetan_formulairesimple.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="0.5"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/titre"
+            android:textSize="@dimen/tailleTitre"
+            android:textColor="@color/black"/>
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/marginLayout">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hintId"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/hintMdp"/>
+
+        <RadioGroup
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/H"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioH" />
+
+            <RadioButton
+                android:id="@+id/F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioF" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_connexion"
+            android:layout_marginTop="75dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+        />
+
+    </LinearLayout>
+</LinearLayout>
